@@ -2,6 +2,8 @@ from mmdet.apis import inference_detector, init_detector, show_result_pyplot
 import sys
 from helper import configs,load_images_from_folder
 import time
+import warnings
+warnings.filterwarnings("ignore")
 
 config=configs[sys.argv[1]]
 Bs=int(sys.argv[2])
@@ -14,4 +16,4 @@ start=time.time()
 result = inference_detector(model, imgs)
 end=time.time()
 
-print(start-end)
+print("Model: "+sys.argv[1]+ "  Bs: "+str(Bs)+" time: "+str(end-start))
