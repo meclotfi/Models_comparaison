@@ -16,6 +16,7 @@ def load_images_from_folder(folder,maxs=8):
 
 configs={
     "Swin":"./configs/swin/mask_rcnn_swin-t-p4-w7_fpn_1x_coco.py",
+    "Swin_fp-16_mss-crop":"./configs/swin/mask_rcnn_swin-t-p4-w7_fpn_fp16_ms-crop-3x_coco.py",
     "Detr-R50":"./configs/detr/detr_r50_8x2_150e_coco.py",
     "Def-DETR-R50":"./configs/deformable_detr/deformable_detr_r50_16x2_50e_coco.py",
     "Def-DETR-R50+iterative_bbox":"./configs/deformable_detr/deformable_detr_refine_r50_16x2_50e_coco.py",
