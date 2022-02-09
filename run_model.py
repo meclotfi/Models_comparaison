@@ -9,9 +9,10 @@ warnings.filterwarnings("ignore")
 
 config=configs[sys.argv[1]]
 Bs=int(sys.argv[2])
+dev=int(sys.argv[3])
 
 imgs=load_images_from_folder("data",maxs=Bs)
-model = init_detector(config, device='cpu')
+model = init_detector(config,device=dev)
 
 stream = os.popen('vmstat -s')
 out2 = stream.read().split()

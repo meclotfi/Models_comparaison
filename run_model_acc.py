@@ -24,7 +24,7 @@ out2 = stream.read().split()
 ind_used=out2.index('used')
 m1=int(out2[ind_used-2])
 
-result = inference_det(model,imgs,is_batch=is_batch)
+result = inference_det(model,data,is_batch=is_batch)
 
 stream = os.popen('vmstat -s')
 out2 = stream.read().split()
@@ -36,7 +36,7 @@ Results=[]
           # calculating latency by averaging over num_trials 
 for i in range(5):
     start=time.time()
-    res = inference_det(model,imgs,is_batch=is_batch)
+    res = inference_det(model,data,is_batch=is_batch)
     end=time.time()
     Results.append(end-start)
           

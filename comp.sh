@@ -4,7 +4,7 @@ for Name in "Swin" "Swin_fp-16_mss-crop" "Detr-R50" "Def-DETR-R50" "Def-DETR-R50
 do
   for Bs in 1 4 8 16
   do
-     python3 ./run_model_acc.py $Name $Bs $dev
+     python3 ./run_model.py $Name $Bs $dev
       
   done
 done
