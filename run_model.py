@@ -37,4 +37,4 @@ for i in range(5):
 # Saving the results 
 r=torch.Tensor(Results)
 
-Write_data_to_csv("/content/gdrive/My Drive/Attention_eff/Model-all-cpu.csv",model=sys.argv[1],conf=config,Bs=Bs,val_mean=r.mean().item(),val_var=r.var.item(),mem=mem)
+Write_data_to_csv("/content/gdrive/My Drive/Attention_eff/Model-all-cpu.csv",model=sys.argv[1],conf=config,Bs=Bs,val_mean=r.mean().item(),val_var=r.var().item(),mem=mem)
