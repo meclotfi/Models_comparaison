@@ -21,10 +21,12 @@ configs={
     "Def-DETR-R50+iterative_bbox":"./configs/deformable_detr/deformable_detr_refine_r50_16x2_50e_coco.py",
     "Def-DETR-R50++two_stage":"./configs/deformable_detr/deformable_detr_twostage_refine_r50_16x2_50e_coco.py",
     "PVT-Tiny":"./configs/pvt/retinanet_pvt-t_fpn_1x_coco.py",
-    "PVTv2-B0":"./configs/pvt/retinanet_pvtv2-b0_fpn_1x_coco.py"
+    "PVTv2-B0":"./configs/pvt/retinanet_pvtv2-b0_fpn_1x_coco.py",
+    "M_rcnn":"./configs/mask_rcnn/mask_rcnn_x101_32x4d_fpn_1x_coco.py",
+    "Yolov3":"./configs/yolo/yolov3_d53_mstrain-608_273e_coco.py"
 }
 def Write_data_to_csv(file_path,model,conf,Bs,val_mean=None,val_var=None,mem=None):
-   S='{model},{conf},{BS},{t_mean},{t_var},{mem}\n'.format(model=model,conf=con, BS=Bs,t_mean=val_mean,t_var=val_var,mem=mem)
+   S='{model},{conf},{BS},{t_mean},{t_var},{mem}\n'.format(model=model,conf=conf, BS=Bs,t_mean=val_mean,t_var=val_var,mem=mem)
    with open(file_path, 'a+') as f:
       f.write(S)
    print(S)
