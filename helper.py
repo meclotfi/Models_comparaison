@@ -23,3 +23,8 @@ configs={
     "PVT-Tiny":"./configs/pvt/retinanet_pvt-t_fpn_1x_coco.py",
     "PVTv2-B0":"./configs/pvt/retinanet_pvtv2-b0_fpn_1x_coco.py"
 }
+def Write_data_to_csv(file_path,model,conf,Bs,val_mean=None,val_var=None,mem=None):
+   S='{model},{conf},{BS},{t_mean},{t_var},{mem}\n'.format(model=model,conf=con, BS=Bs,t_mean=val_mean,t_var=val_var,mem=mem)
+   with open(file_path, 'a+') as f:
+      f.write(S)
+   print(S)
